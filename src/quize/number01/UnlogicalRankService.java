@@ -1,6 +1,7 @@
 package quize.number01;
 
-public class UnlogicalRankingService implements RankingService {
+
+public class UnlogicalRankService implements RankingService {
 
 	@Override
 	public int[] rank(int[] scores) {
@@ -32,7 +33,7 @@ public class UnlogicalRankingService implements RankingService {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		RankingService rs = new UnlogicalRankingService();
+		RankingService rs = new UnlogicalRankService();
 
 		int[] scores = new int[]{80,80,100,60,10,10,1,1000};
 		int[] result = rs.rank(scores);
@@ -40,5 +41,6 @@ public class UnlogicalRankingService implements RankingService {
 			System.out.println(i + " " + scores[i] + " " + result[i]);
 		}
 	}
+
 
 }
